@@ -19,7 +19,6 @@ module.exports = {
     plugins: [
       'react',
       '@typescript-eslint',
-      '@typescript-eslint/parser',
     ],
     rules: {
       'react/function-component-definition': [2, {
