@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: routes.HomePage,
-        element: <HomePage />,
-      },
+        element: < HomePage />,
+      }
     ],
   },
 ]);
