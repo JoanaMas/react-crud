@@ -8,8 +8,8 @@ const RestaurantNameFieldComponent = () => (
     alignItems="center"
   >
 
-    <TextField id="name" label="Name" variant="outlined" size="small" color="primary" />
-    <TextField id="title" label="Title" variant="outlined" size="small" />
+    <TextField id="name" name="name" label="Name" variant="outlined" size="small" color="primary" />
+    <TextField id="title" name="title" label="Title" variant="outlined" size="small" />
   </Stack>
 );
 

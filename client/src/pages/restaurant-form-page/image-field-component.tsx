@@ -25,6 +25,7 @@ const ImageFieldComponent = () => {
     <Stack direction="column" spacing={2}>
       <TextField
         id="id"
+        name="image"
         label="Image"
         variant="outlined"
         size="small"
@@ -44,6 +45,7 @@ const ImageFieldComponent = () => {
       imgFields.map((imageId) => (
         <TextField
           id="id"
+          name="image"
           key={imageId}
           label="Image"
           variant="outlined"

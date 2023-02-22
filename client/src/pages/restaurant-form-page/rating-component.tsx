@@ -3,7 +3,7 @@ import { Stack, Rating } from '@mui/material';
 
 const RatingComponent = () => (
   <Stack alignSelf="center">
-    <Rating />
+    <Rating name="rating" />
   </Stack>
 );
 
