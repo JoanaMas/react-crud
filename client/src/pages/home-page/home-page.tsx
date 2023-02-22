@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import { RestaurantsGridStyles } from './styled';
 import RestaurantCard from './restaurant-card';
 
-
 const HomePage = () => {
   const [restaurants, setRestaurants] = React.useState<RestaurantsModel[]>([]);
   const navigate = useNavigate();
@@ -25,7 +24,7 @@ const HomePage = () => {
 
       <Button
         variant="outlined"
-        color="success"
+        color="primary"
         onClick={() => navigate(routes.RestaurantFormPage)}
       >
         Add Restaurant
