@@ -1,12 +1,17 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 import { RestaurantsModel } from 'models/restaurant-model';
 import ApiService from 'services/api-service';
+import routes from 'navigation/routes';
+import { useNavigate } from 'react-router-dom';
 import { RestaurantsGridStyles } from './styled';
 import RestaurantCard from './restaurant-card';
 
+
 const HomePage = () => {
   const [restaurants, setRestaurants] = React.useState<RestaurantsModel[]>([]);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     (async () => {
@@ -17,6 +22,16 @@ const HomePage = () => {
 
   return (
     <Box sx={{ p: '50px' }}>
+
+      <Button
+        variant="outlined"
+        color="success"
+        onClick={() => navigate(routes.RestaurantFormPage)}
+      >
+        Add Restaurant
+        <AddIcon />
+      </Button>
+
       <Box sx={RestaurantsGridStyles}>
         {
           restaurants.map((restaurant) => (

@@ -1,5 +1,6 @@
 const routes = {
   HomePage: '/',
+  RestaurantFormPage: '/restaurant-create-form',
   SingleRestaurantPage: {
     path: '/restaurant/:id',
     createLink: (id: string | number) => `/restaurant/${id}`,
