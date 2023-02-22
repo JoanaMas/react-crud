@@ -7,7 +7,7 @@ export const RestaurantsGridStyles = (theme: Theme) => ({
     gridTemplateColumns: 'repeat(2, 1fr)',
     alignContent: 'space-around',
   },
-  [theme.breakpoints.up('xl')]: {
+  [theme.breakpoints.up('lg')]: {
     gridTemplateColumns: 'repeat(3, 1fr)',
   },
 });
@@ -42,12 +42,12 @@ export const ContactInfoStyles = styled(Stack)(() => ({
   backgroundColor: '#ffffffa5',
   color: '#474157',
   paddingRight: '10px',
-  borderLeft: 1,
-  borderWidth: '10px',
-  borderColor: '#9689b8a5',
+  // borderLeft: '2rem',
+  // borderWidth: '20px',
+  // borderColor: '#9689b8a5',
 }));
 
-export const LinkButtonStyles = styled(Stack)(() => ({
+export const ButtonStyles = styled(Stack)(() => ({
   justifyContent: 'center',
   alignItems: 'center',
   width: '140px',

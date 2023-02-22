@@ -3,7 +3,7 @@ export interface RestaurantsModel {
   name: string,
   title: string,
   phone: string,
-  website: string,
+  website?: string,
   rating?: number,
   location: {
     address: string,

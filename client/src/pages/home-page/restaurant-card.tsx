@@ -1,52 +1,65 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { RestaurantsModel } from 'models/restaurant-model';
 import {
-  Typography, Link, Box,
+  Typography, Link, Box, Button,
 } from '@mui/material';
+import routes from 'navigation/routes';
+import { useNavigate } from 'react-router-dom';
 import {
   RestaurantsContainer,
   HeadingAndContactFlexContainer,
   HeadingStyles,
   ContactInfoStyles,
-  LinkButtonStyles,
+  ButtonStyles,
 } from './styled';
 
 type RestaurantCardProps = RestaurantsModel;
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
+  id,
   name,
   title,
   phone,
-  website,
   location,
   images,
-}) => (
-  <RestaurantsContainer
-    spacing={4}
-    sx={{ backgroundImage: `url(${images[0]})` }}
-  >
+}) => {
+  const navigate = useNavigate();
 
-    <HeadingAndContactFlexContainer direction="row" spacing={4}>
+  return (
+    <RestaurantsContainer
+      spacing={4}
+      sx={{ backgroundImage: `url(${images[0]})` }}
+    >
 
-      <HeadingStyles spacing={2}>
-        <Typography variant="h1" sx={{ fontSize: '25pt', fontWeight: '600' }}>{name}</Typography>
-        <Typography variant="h3" sx={{ fontSize: '14pt', fontWeight: '600' }}>{title}</Typography>
-      </HeadingStyles>
+      <HeadingAndContactFlexContainer direction="row" spacing={4}>
 
-      <ContactInfoStyles spacing={2}>
-        <Typography variant="body1">{`${location.address}, ${location.city}`}</Typography>
-        <Link href={`tel:${phone}`}>{phone}</Link>
-      </ContactInfoStyles>
+        <HeadingStyles spacing={2}>
+          <Typography variant="h1" sx={{ fontSize: '25pt', fontWeight: '600' }}>{name}</Typography>
+          <Typography variant="h3" sx={{ fontSize: '14pt', fontWeight: '600' }}>{title}</Typography>
+        </HeadingStyles>
 
-    </HeadingAndContactFlexContainer>
+        <ContactInfoStyles spacing={2}>
+          <Typography variant="body1">{`${location.address}, ${location.city}`}</Typography>
+          <Link href={`tel:${phone}`}>{phone}</Link>
+        </ContactInfoStyles>
 
-    <Box>
-      <LinkButtonStyles direction="row">
-        <Link href={website} sx={{ textDecoration: 'none', color: '#FFFFFF' }}>Visit out page!</Link>
-      </LinkButtonStyles>
-    </Box>
+      </HeadingAndContactFlexContainer>
 
-  </RestaurantsContainer>
-);
+      <Box>
+        <ButtonStyles direction="row">
+          <Button
+            onClick={() => navigate(routes.SingleRestaurantPage.createLink(id))}
+            sx={{ textDecoration: 'none', color: '#FFFFFF' }}
+          >
+            Visit out page!
+
+          </Button>
+        </ButtonStyles>
+      </Box>
+
+    </RestaurantsContainer>
+  );
+};
 
 export default RestaurantCard;
