@@ -25,7 +25,7 @@ const RestaurantFormPage = () => (
       <Stack
         direction="row"
         sx={{
-          backgroundColor: '#9689b8', width: { xs: 1, md: '800px' }, height: '650px', mx: { xs: '20px' }, color: '#FFFFFF',
+          backgroundColor: '#9689b8', width: { xs: 1, md: '800px' }, maxHeight: 'auto', mx: { xs: '20px' }, color: '#FFFFFF',
         }}
       >
         {/* Form Image Component */}
@@ -61,10 +61,10 @@ const RestaurantFormPage = () => (
             <ImageFieldComponent />
 
             {/* Rating */}
-            <RatingComponent />
 
             {/* Button */}
-            <Stack alignItems="center" pt="0.5rem">
+            <Stack alignItems="center" pb="2rem">
+              <RatingComponent />
               <Button variant="outlined" fullWidth sx={{ mt: '20px' }}>Create</Button>
             </Stack>
 
