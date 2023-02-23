@@ -1,211 +1,240 @@
 {
-    "restaurants": [
-        {
-            "id": "1",
-            "name": "Fresh Pot",
-            "title": "Šviežios salotos ir sveiki kokteiliai",
-            "phone": "+37064300350",
-            "website": "https://freshpost.lt/",
-            "rating": 9.6,
-            "location": {
-                "address": "Gynėjų g.",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://freshpost.lt/wp-content/uploads/2022/10/4.jpg",
-                "https://freshpost.lt/wp-content/uploads/2022/10/5.jpg",
-                "https://freshpost.lt/wp-content/uploads/2022/10/1.jpg"
-    
-            ]
-        },
-        {
-            "id": "2",
-            "name": "Azerai",
-            "title": "Šeimai priklausanti kebabinė",
-            "phone": "+37064853713",
-            "website": "",
-            "rating": 9.2,
-            "location": {
-                "address": "Kauno g. 2",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/627905569c9c03bd7aa9f15e/3f8d7842-9afd-11ed-b760-72d013a3060c_azerai_001.jpeg",
-                "https://imageproxy.wolt.com/menu/menu-images/627905569c9c03bd7aa9f15e/772c9b30-4a16-11ed-90fb-3accd448092d_azerai_2__1_.jpeg",
-                "https://imageproxy.wolt.com/menu/menu-images/6022444e0651a08b883842e1/74e2097c-7768-11ec-9454-d6dee212c84c_azerai_1.jpeg"
-            ]
-        },
-        {
-            "id": "3",
-            "name": "Dou Asia",
-            "title": "WOKai ir BAO Bunsai",
-            "phone": "+37060223969",
-            "website": "https://www.facebook.com/DouAsia.lt",
-            "rating": 9.0,
-            "location": {
-                "address": "Kauno g. 13",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/c5764a6c-c1a8-11ec-8c2d-e2f69460211d_z6a_3390_wolt_red.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/cc15a190-c04e-11ea-9bc4-5ec8b2e6a3da_68.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/c8c4e0ec-28b2-11eb-ba34-0693f425263b_vistienos_wok.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "4",
-            "name": "Bernelių užeiga",
-            "title": "Lietuviški tradiciniai patiekalai",
-            "phone": "+37066360232",
-            "website": "https://berneliuuzeiga.lt",
-            "rating": 9.4,
-            "location": {
-                "address": "Gedimino pr. 19/1",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5c66975fffb18d0009a1bedf/2b85be46-9afc-11ed-98bc-6e87e1befd12_berneliu__uz_eiga_2.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5c66975fffb18d0009a1bedf/696fd46e-609b-11eb-9407-6a3a1cdd2e7f_img_9856.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/ae8f58d8-7b98-11e9-a837-0a58646013bd_3.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "5",
-            "name": "Habibi Oriental Food",
-            "title": "Unikali Vidurio Rytų virtuvė su ypatingais tradiciniais skoniais",
-            "phone": "+37061889451",
-            "website": "https://m.facebook.com/Habibi-Oriental-Food-Falafel-and-Hummus-Elite-Shawarma-631812940307368/",
-            "rating": 8.6,
-            "location": {
-                "address": "Pylimo g. 25",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/d3d6a6e2-8333-11eb-8170-f6b92cbb2d93_img_20210219_172044.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/40240dc0-2a52-11eb-ac7b-5ef631dd7bc1_shawarma_falafel_and_hummus__0006_5.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/2db65972-2a52-11eb-9a7f-22210954d19d_shawarma_falafel_and_hummus__0005_6.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "6",
-            "name": "Formosa Bubble Tea",
-            "title": "Burbulinė arbata",
-            "phone": "+37069804983",
-            "website": "https://www.formosa.lt/",
-            "rating": 9.0,
-            "location": {
-                "address": "Gedimino pr. 9 (1 a.)",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/5bb01704-21ff-11ed-aca6-4a93870bc91d_original_fresh_tea.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/2d70478a-2207-11ed-8812-ce1fc9753c41_creme_brulee.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/e89b388c-2205-11ed-94b3-4e3bd707541f_latte.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "7",
-            "name": "Amélie",
-            "title": "Jis primena kruasaną, bet labai panašus į spurgą… tai naujasis Croustinet!",
-            "phone": "+37061289269",
-            "website": "",
-            "rating": 9.6,
-            "location": {
-                "address": "Virtuali vieta",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/fc413e04-4adc-11ed-8936-f6d82e123f4e_nutella.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/4eea5f00-4add-11ed-99a3-22d5ff208473_rasberry.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/1280a34e-4add-11ed-90b8-f6d82e123f4e_rafaello.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "8",
-            "name": "The Urban Garden",
-            "title": "Veganiškas ir vegetariškas pusryčių ir brunch restoranas",
-            "phone": "+37061460292",
-            "website": "https://www.facebook.com/theurbangardenlt?fbclid=IwAR3NXYVeS44E-L23r5eoOVpxmDNU4mu3m8ijALpa_ZStNxqpZRcv5mTutwk",
-            "rating": 9.2,
-            "location": {
-                "address": "J.Basanaviciaus g. 3",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/181cf04e-7b9f-11ed-972e-ea36f0436eed_d8928109_50c4_4e50_98d1_25254af708a4.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/abf27d5c-8924-11ec-bda4-e22cae1d72ff_d920250c_4192_4fce_bc41_d982dee22acd.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/308e1062-574d-11ec-a2c1-6a8021732357_58721257_b097_4581_b835_bd477f964989.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "9",
-            "name": "Eat More Chinese",
-            "title": "Kinų virtuvė",
-            "phone": "+37061727757",
-            "website": "https://www.shimai.lt/kinieciu-maistas",
-            "rating": 8.8,
-            "location": {
-                "address": "A. Smetonos g. 5",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5c1393f6e8f163000b9e0f23/7d13896a-98cb-11ed-98e5-5e3bc26854b9_2.eatmorechinese_5.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/0bbb3058-6bf5-11e9-a9bf-0a5864625a87_meniu_8.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5f6854e50b13ac3cd729fb0b/38203b9c-56e5-11ec-a1c6-d2abae3780f2_vis_tiena_su__tigrine_mis_krevete_mis.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "10",
-            "name": "LOLA",
-            "title": "LOLA - pusryčiai visą dieną kiekvieną dieną!",
-            "phone": "+37065767914",
-            "website": "https://www.lolavilnius.lt",
-            "rating": 9.2,
-            "location": {
-                "address": "Naugarduko g. 2a",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/55bf7b4c-6b5a-11ed-972a-869e77ded0a1_lola_7.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/a37bea52-a51a-11ec-a90a-72b721143f50_lola_bennys_su_las_is_a.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/dc2da476-a51a-11ec-ad1e-268ae54917e9_cilbir_turkish_eggs.jpeg?w=600"
-            ]
-        },
-        {
-            "id": "11",
-            "name": "Grey",
-            "title": "Europietiškas ir lietuviškas meniu su tradiciniais ir moderniais patiekalais",
-            "phone": "+37063322677",
-            "website": "https://www.restoranasgrey.lt",
-            "rating": 9.2,
-            "location": {
-                "address": "Pilies g. 2",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/30457bde-69b4-11ed-b6de-1abfc0c641b3_e70c0bc6_a7fd_47c4_9cda_3eee4f1b4194_1_201_a.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/1d4ad70a-bbd5-11ec-8f14-fa2390d75a06_c8978480_e921_4711_a7b1_f0c1afd80e5c_1_201_a.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/3a8f9e60-b9cb-11ec-ad63-5e366c799604_img_1318.jpeg?w=600"
-    
-            ]
-        },
-        {
-            "id": "12",
-            "name": "Jurgis ir drakonas",
-            "title": "Puiki ir tikra neapolietiška pica",
-            "phone": "+37060077977",
-            "website": "https://jurgisirdrakonas.lt",
-            "rating": 8.4,
-            "location": {
-                "address": "Pylimo g. 22D",
-                "city": "Vilnius"
-            },
-            "images": [
-                "https://imageproxy.wolt.com/menu/menu-images/59c92397247fd46522a41710/b7f4e5e4-98ce-11ed-a5fa-6acdcaffc59d_jurgis_ir_drakonas_4.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/c9e97740-d0e4-11e7-b9f7-0a5864606713_laba_diena_su_vis_tiena.jpeg?w=600",
-                "https://imageproxy.wolt.com/menu/menu-images/81f1026e-d0e4-11e7-bcee-0a5864605342_prosciutto.jpeg?w=600"
-    
-            ]
-        }
-    ]
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Fresh Pot",
+      "title": "Šviežios salotos ir sveiki kokteiliai",
+      "phone": "+37064300350",
+      "website": "https://freshpost.lt/",
+      "rating": 9.6,
+      "location": {
+        "address": "Gynėjų g.",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://freshpost.lt/wp-content/uploads/2022/10/4.jpg",
+        "https://freshpost.lt/wp-content/uploads/2022/10/5.jpg",
+        "https://freshpost.lt/wp-content/uploads/2022/10/1.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azerai",
+      "title": "Šeimai priklausanti kebabinė",
+      "phone": "+37064853713",
+      "website": "",
+      "rating": 9.2,
+      "location": {
+        "address": "Kauno g. 2",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/627905569c9c03bd7aa9f15e/3f8d7842-9afd-11ed-b760-72d013a3060c_azerai_001.jpeg",
+        "https://imageproxy.wolt.com/menu/menu-images/627905569c9c03bd7aa9f15e/772c9b30-4a16-11ed-90fb-3accd448092d_azerai_2__1_.jpeg",
+        "https://imageproxy.wolt.com/menu/menu-images/6022444e0651a08b883842e1/74e2097c-7768-11ec-9454-d6dee212c84c_azerai_1.jpeg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Dou Asia",
+      "title": "WOKai ir BAO Bunsai",
+      "phone": "+37060223969",
+      "website": "https://www.facebook.com/DouAsia.lt",
+      "rating": 9,
+      "location": {
+        "address": "Kauno g. 13",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/c5764a6c-c1a8-11ec-8c2d-e2f69460211d_z6a_3390_wolt_red.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/cc15a190-c04e-11ea-9bc4-5ec8b2e6a3da_68.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5c925b5413750b000e2181bf/c8c4e0ec-28b2-11eb-ba34-0693f425263b_vistienos_wok.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Bernelių užeiga",
+      "title": "Lietuviški tradiciniai patiekalai",
+      "phone": "+37066360232",
+      "website": "https://berneliuuzeiga.lt",
+      "rating": 9.4,
+      "location": {
+        "address": "Gedimino pr. 19/1",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5c66975fffb18d0009a1bedf/2b85be46-9afc-11ed-98bc-6e87e1befd12_berneliu__uz_eiga_2.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5c66975fffb18d0009a1bedf/696fd46e-609b-11eb-9407-6a3a1cdd2e7f_img_9856.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/ae8f58d8-7b98-11e9-a837-0a58646013bd_3.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Habibi Oriental Food",
+      "title": "Unikali Vidurio Rytų virtuvė su ypatingais tradiciniais skoniais",
+      "phone": "+37061889451",
+      "website": "https://m.facebook.com/Habibi-Oriental-Food-Falafel-and-Hummus-Elite-Shawarma-631812940307368/",
+      "rating": 8.6,
+      "location": {
+        "address": "Pylimo g. 25",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/d3d6a6e2-8333-11eb-8170-f6b92cbb2d93_img_20210219_172044.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/40240dc0-2a52-11eb-ac7b-5ef631dd7bc1_shawarma_falafel_and_hummus__0006_5.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5fb4e59ded575b5bbb0bc6e0/2db65972-2a52-11eb-9a7f-22210954d19d_shawarma_falafel_and_hummus__0005_6.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Formosa Bubble Tea",
+      "title": "Burbulinė arbata",
+      "phone": "+37069804983",
+      "website": "https://www.formosa.lt/",
+      "rating": 9,
+      "location": {
+        "address": "Gedimino pr. 9 (1 a.)",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/5bb01704-21ff-11ed-aca6-4a93870bc91d_original_fresh_tea.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/2d70478a-2207-11ed-8812-ce1fc9753c41_creme_brulee.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5a686c80c9d4e2000de1e55a/e89b388c-2205-11ed-94b3-4e3bd707541f_latte.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Amélie",
+      "title": "Jis primena kruasaną, bet labai panašus į spurgą… tai naujasis Croustinet!",
+      "phone": "+37061289269",
+      "website": "",
+      "rating": 9.6,
+      "location": {
+        "address": "Virtuali vieta",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/fc413e04-4adc-11ed-8936-f6d82e123f4e_nutella.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/4eea5f00-4add-11ed-99a3-22d5ff208473_rasberry.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/6347ddba6b1f4781e0bb8e74/1280a34e-4add-11ed-90b8-f6d82e123f4e_rafaello.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "The Urban Garden",
+      "title": "Veganiškas ir vegetariškas pusryčių ir brunch restoranas",
+      "phone": "+37061460292",
+      "website": "https://www.facebook.com/theurbangardenlt?fbclid=IwAR3NXYVeS44E-L23r5eoOVpxmDNU4mu3m8ijALpa_ZStNxqpZRcv5mTutwk",
+      "rating": 9.2,
+      "location": {
+        "address": "J.Basanaviciaus g. 3",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/181cf04e-7b9f-11ed-972e-ea36f0436eed_d8928109_50c4_4e50_98d1_25254af708a4.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/abf27d5c-8924-11ec-bda4-e22cae1d72ff_d920250c_4192_4fce_bc41_d982dee22acd.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5d1610605cc621ce83104d91/308e1062-574d-11ec-a2c1-6a8021732357_58721257_b097_4581_b835_bd477f964989.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Eat More Chinese",
+      "title": "Kinų virtuvė",
+      "phone": "+37061727757",
+      "website": "https://www.shimai.lt/kinieciu-maistas",
+      "rating": 8.8,
+      "location": {
+        "address": "A. Smetonos g. 5",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5c1393f6e8f163000b9e0f23/7d13896a-98cb-11ed-98e5-5e3bc26854b9_2.eatmorechinese_5.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/0bbb3058-6bf5-11e9-a9bf-0a5864625a87_meniu_8.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5f6854e50b13ac3cd729fb0b/38203b9c-56e5-11ec-a1c6-d2abae3780f2_vis_tiena_su__tigrine_mis_krevete_mis.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "LOLA",
+      "title": "LOLA - pusryčiai visą dieną kiekvieną dieną!",
+      "phone": "+37065767914",
+      "website": "https://www.lolavilnius.lt",
+      "rating": 9.2,
+      "location": {
+        "address": "Naugarduko g. 2a",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/55bf7b4c-6b5a-11ed-972a-869e77ded0a1_lola_7.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/a37bea52-a51a-11ec-a90a-72b721143f50_lola_bennys_su_las_is_a.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/6231c5d9f1d59a3dff5e9cef/dc2da476-a51a-11ec-ad1e-268ae54917e9_cilbir_turkish_eggs.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Grey",
+      "title": "Europietiškas ir lietuviškas meniu su tradiciniais ir moderniais patiekalais",
+      "phone": "+37063322677",
+      "website": "https://www.restoranasgrey.lt",
+      "rating": 9.2,
+      "location": {
+        "address": "Pilies g. 2",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/30457bde-69b4-11ed-b6de-1abfc0c641b3_e70c0bc6_a7fd_47c4_9cda_3eee4f1b4194_1_201_a.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/1d4ad70a-bbd5-11ec-8f14-fa2390d75a06_c8978480_e921_4711_a7b1_f0c1afd80e5c_1_201_a.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/3a8f9e60-b9cb-11ec-ad63-5e366c799604_img_1318.jpeg?w=600"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Jurgis ir drakonas",
+      "title": "Puiki ir tikra neapolietiška pica",
+      "phone": "+37060077977",
+      "website": "https://jurgisirdrakonas.lt",
+      "rating": 8.4,
+      "location": {
+        "address": "Pylimo g. 22D",
+        "city": "Vilnius"
+      },
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/59c92397247fd46522a41710/b7f4e5e4-98ce-11ed-a5fa-6acdcaffc59d_jurgis_ir_drakonas_4.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/c9e97740-d0e4-11e7-b9f7-0a5864606713_laba_diena_su_vis_tiena.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/81f1026e-d0e4-11e7-bcee-0a5864605342_prosciutto.jpeg?w=600"
+      ]
+    },
+    {
+      "name": "Vardas",
+      "title": "Pavarde",
+      "phone": "Telefonas",
+      "website": "Websire",
+      "location": {
+        "address": "Adresas",
+        "city": "Miestas"
+      },
+      "rating": 4,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/6053473d5d8835769eb592d3/f453e84e-52a3-11ed-853e-fe698940dd72_boite_84.jpeg?w=960",
+        "https://imageproxy.wolt.com/menu/menu-images/6053473d5d8835769eb592d3/915fc6e4-52a4-11ed-9ced-8e2f17bb6376_boite_72.jpeg?w=960"
+      ],
+      "id": "xGATcxr"
+    },
+    {
+      "name": "Užupio Kepyklėlė",
+      "title": "Aukštos kokybės konditerijos gaminiai, tortai, bandelės",
+      "phone": "5867483756",
+      "website": "https://wolt.com/lt/ltu/vilnius/restaurant/cyrano-uzupio-kepyklele",
+      "location": {
+        "address": "Užupio g. 5",
+        "city": "Vilnius"
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/6053473d5d8835769eb592d3/7e83374a-1e33-11ed-854a-02056b49edf3_bandele__su_cinamonu.jpeg?w=600",
+        "https://imageproxy.wolt.com/menu/menu-images/6053473d5d8835769eb592d3/5ae54da0-1e33-11ed-93a6-3e6108174029_uz_upio_kepykle_le__55.jpeg?w=600"
+      ],
+      "id": "sCUIz15"
     }
+  ]
+}

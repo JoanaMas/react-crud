@@ -5,6 +5,7 @@ import {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import { RestaurantsModel } from 'models/restaurant-model';
+import axios from 'axios';
 import ImageFieldComponent from './image-field-component';
 import RestaurantNameFieldComponent from './restaurant-name-field-component';
 import RestaurantContactFieldComponent from './restaurant-contact-field-component';
@@ -69,15 +70,16 @@ const getRestaurantsData = (form: HTMLFormElement | undefined): Omit<Restaurants
 const RestaurantFormPage = () => {
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
 
-  const handleSubmit = (event: React.SyntheticEvent) => {
+  const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    const values = getRestaurantsData(formRef.current);
 
-    try {
-      const values = getRestaurantsData(formRef.current);
-      console.log('Vykdomas sukūrimas');
-      console.log(values);
-    } catch (error) {
-      alert(error);
+    const response = await axios.post('http://localhost:5024/restaurants', values);
+
+    if (response) {
+      alert('Data submitted successfully');
+    } else {
+      alert(Error);
     }
   };
 
