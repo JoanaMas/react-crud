@@ -235,6 +235,96 @@
         "https://imageproxy.wolt.com/menu/menu-images/6053473d5d8835769eb592d3/5ae54da0-1e33-11ed-93a6-3e6108174029_uz_upio_kepykle_le__55.jpeg?w=600"
       ],
       "id": "sCUIz15"
+    },
+    {
+      "name": "Restorans",
+      "title": "Restorans",
+      "phone": "5454563",
+      "website": "Website",
+      "location": {
+        "address": "Address",
+        "city": "City"
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5acb7aaa28a0d4000bc1b85e/8c88324a-d33f-11eb-ae4f-4a0a03e04b2b_95785122_2804988022887862_4867332681022570496_n.jpeg?w=600"
+      ],
+      "id": "NpqLXDA"
+    },
+    {
+      "name": "test1 ",
+      "title": "test1 ",
+      "phone": "test1 ",
+      "website": "test1 ",
+      "location": {
+        "address": "test1 ",
+        "city": "test1 "
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5acb7aaa28a0d4000bc1b85e/71192ef4-d41d-11eb-9bc5-8e725a347bf7_nduja.jpeg?w=600"
+      ],
+      "id": "erOnCFD"
+    },
+    {
+      "name": "test1 ",
+      "title": "test1 ",
+      "phone": "test1 ",
+      "website": "test1 ",
+      "location": {
+        "address": "test1 ",
+        "city": "test1 "
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5acb7aaa28a0d4000bc1b85e/71192ef4-d41d-11eb-9bc5-8e725a347bf7_nduja.jpeg?w=600"
+      ],
+      "id": "4V3TA0N"
+    },
+    {
+      "name": "Restoranas1",
+      "title": "Restoranas1",
+      "phone": "Restoranas1",
+      "website": "Restoranas1",
+      "location": {
+        "address": "Restoranas1",
+        "city": "Restoranas1"
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5acb7aaa28a0d4000bc1b85e/0c5356a0-d33e-11eb-8a22-9267642a529f_13701075_1043146282436873_8127945349528330273_o.jpeg?w=960"
+      ],
+      "id": "Yr7n7wf"
+    },
+    {
+      "name": "dffs",
+      "title": "dfsf",
+      "phone": "fsdfs",
+      "website": "dfsf",
+      "location": {
+        "address": "dfs",
+        "city": "dfdsf"
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/5acb7aaa28a0d4000bc1b85e/0c5356a0-d33e-11eb-8a22-9267642a529f_13701075_1043146282436873_8127945349528330273_o.jpeg?w=960"
+      ],
+      "id": "S6C15UU"
+    },
+    {
+      "name": "12",
+      "title": "12",
+      "phone": "12233",
+      "website": "fgdgdfg",
+      "location": {
+        "address": "fgdg",
+        "city": "dfgdgg"
+      },
+      "rating": 5,
+      "images": [
+        "https://imageproxy.wolt.com/menu/menu-images/e112bfe0-682b-11ea-9538-0a58647cd525_Screen_Shot_2020-03-17_at_10.42.32_am.jpeg?w=600"
+      ],
+      "id": "mo7gt-p"
     }
   ]
 }

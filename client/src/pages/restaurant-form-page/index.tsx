@@ -6,6 +6,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import { RestaurantsModel } from 'models/restaurant-model';
 import axios from 'axios';
+import routes from 'navigation/routes';
+import { useNavigate } from 'react-router-dom';
 import ImageFieldComponent from './image-field-component';
 import RestaurantNameFieldComponent from './restaurant-name-field-component';
 import RestaurantContactFieldComponent from './restaurant-contact-field-component';
@@ -69,6 +71,7 @@ const getRestaurantsData = (form: HTMLFormElement | undefined): Omit<Restaurants
 
 const RestaurantFormPage = () => {
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -78,6 +81,7 @@ const RestaurantFormPage = () => {
 
     if (response) {
       alert('Data submitted successfully');
+      navigate(routes.HomePage);
     } else {
       alert(Error);
     }
@@ -131,7 +135,9 @@ const RestaurantFormPage = () => {
               {/* Button */}
               <Stack alignItems="center" pb="2rem">
                 <RatingComponent />
-                <Button variant="outlined" type="submit" fullWidth sx={{ mt: '20px' }}>Create</Button>
+                <Button variant="outlined" type="submit" fullWidth sx={{ mt: '20px' }}>
+                  Create
+                </Button>
               </Stack>
 
             </Stack>
