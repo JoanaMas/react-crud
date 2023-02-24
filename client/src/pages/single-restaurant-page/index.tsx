@@ -1,12 +1,11 @@
 import React from 'react';
 import { Box, styled } from '@mui/material';
-import { RestaurantsModel } from 'models/restaurant-model';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
-import ApiService from 'services/api-service';
 import Img from 'components/ui/img';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import useRestaurant from 'hooks/useRestaurant';
 // Swipers styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -17,17 +16,10 @@ const StyledSwiper = styled(Swiper)({
 });
 
 const SingleRestaurantPage = () => {
+  // Gaunamas puslapio id, kuris priskirtas prie url
   const { id } = useParams();
-  const [restaurant, setRestaurant] = React.useState<undefined | RestaurantsModel>(undefined);
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedRestaurant = await ApiService.fetchRestaurant(id);
-        setRestaurant(fetchedRestaurant);
-      })();
-    }
-  }, []);
+  // Panaudojam savo susikurtą hooksą, kuris gražina vieno restorano duomenis
+  const [restaurant] = useRestaurant(id);
 
   if (id === undefined) return <Navigate to={routes.HomePage} />;
   if (restaurant === undefined) return null;

@@ -67,23 +67,6 @@
         "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/1d4ad70a-bbd5-11ec-8f14-fa2390d75a06_c8978480_e921_4711_a7b1_f0c1afd80e5c_1_201_a.jpeg?w=600",
         "https://imageproxy.wolt.com/menu/menu-images/5c73b6ec70ce7a000ad199bf/3a8f9e60-b9cb-11ec-ad63-5e366c799604_img_1318.jpeg?w=600"
       ]
-    },
-    {
-      "id": "12",
-      "name": "Jurgis ir drakonas",
-      "title": "Puiki ir tikra neapolietiška pica",
-      "phone": "+37060077977",
-      "website": "https://jurgisirdrakonas.lt",
-      "rating": 8.4,
-      "location": {
-        "address": "Pylimo g. 22D",
-        "city": "Vilnius"
-      },
-      "images": [
-        "https://imageproxy.wolt.com/menu/menu-images/59c92397247fd46522a41710/b7f4e5e4-98ce-11ed-a5fa-6acdcaffc59d_jurgis_ir_drakonas_4.jpeg?w=600",
-        "https://imageproxy.wolt.com/menu/menu-images/c9e97740-d0e4-11e7-b9f7-0a5864606713_laba_diena_su_vis_tiena.jpeg?w=600",
-        "https://imageproxy.wolt.com/menu/menu-images/81f1026e-d0e4-11e7-bcee-0a5864605342_prosciutto.jpeg?w=600"
-      ]
     }
   ]
 }

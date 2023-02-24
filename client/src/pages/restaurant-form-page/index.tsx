@@ -9,6 +9,7 @@ import { RestaurantsModel } from 'models/restaurant-model';
 import ApiService from 'services/api-service';
 import routes from 'navigation/routes';
 import { useNavigate, useParams } from 'react-router-dom';
+import useRestaurant from 'hooks/useRestaurant';
 import ImageFieldComponent from './image-field-component';
 import RestaurantNameFieldComponent from './restaurant-name-field-component';
 import RestaurantContactFieldComponent from './restaurant-contact-field-component';
@@ -74,19 +75,11 @@ const getRestaurantsData = (form: HTMLFormElement | undefined): Omit<Restaurants
 
 const RestaurantFormPage = () => {
   // Update
-  
+
+  // Update - step 1 - gaunamas vieno puslapio duomenų objektas, priklausomai nuo ID
   const { id } = useParams();
-  const [restaurant, setRestaurant] = React.useState<undefined | RestaurantsModel>(undefined);
-
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedRestaurant = await ApiService.fetchRestaurant(id);
-        setRestaurant(fetchedRestaurant);
-      })();
-    }
-  }, []);
+  // Panaudojam savo susikurtą hooksą, kuris gražina vieno restorano duomenis
+  const [restaurant, loading] = useRestaurant(id);
 
   // Create
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
@@ -107,6 +100,8 @@ const RestaurantFormPage = () => {
       alert(Error);
     }
   };
+
+  if (loading) return null;
 
   return (
     <ThemeProvider theme={theme}>
