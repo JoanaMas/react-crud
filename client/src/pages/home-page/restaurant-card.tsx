@@ -8,7 +8,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import EditIcon from '@mui/icons-material/Edit';
 import routes from 'navigation/routes';
 import { useNavigate } from 'react-router-dom';
-import ApiService from 'services/api-service';
+// import ApiService from 'services/api-service';
 import {
   RestaurantsContainer,
   HeadingAndContactFlexContainer,
@@ -17,7 +17,9 @@ import {
   ButtonStyles,
 } from './styled';
 
-type RestaurantCardProps = RestaurantsModel;
+type RestaurantCardProps = RestaurantsModel & {
+  onDelete: VoidFunction
+};
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
   id,
@@ -26,20 +28,9 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
   phone,
   location,
   images,
+  onDelete,
 }) => {
   const navigate = useNavigate();
-
-  // Delete
-  const handleDelete = async () => {
-    const response = await ApiService.deleteRestaurant(id);
-
-    if (response) {
-      ApiService.fetchRestaurants();
-      document.location.reload();
-    } else {
-      alert(Error);
-    }
-  };
 
   return (
     <RestaurantsContainer
@@ -61,7 +52,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
 
         {/* Delete Button */}
         <IconButton
-          onClick={() => handleDelete()}
+          onClick={() => onDelete()}
           disableRipple
           sx={{
             bgcolor: '#9689b8', color: '#FFFFFF', width: '40px', height: '40px',

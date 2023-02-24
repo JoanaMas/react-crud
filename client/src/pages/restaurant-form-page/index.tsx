@@ -72,14 +72,16 @@ const getRestaurantsData = (form: HTMLFormElement | undefined): Omit<Restaurants
 };
 
 // Component
-
 const RestaurantFormPage = () => {
   // Update
 
   // Update - step 1 - gaunamas vieno puslapio duomenų objektas, priklausomai nuo ID
+  // išsitraukus ID galime daryti pakeitimus formos UI, ---> žiūrėti į gražinamą JSX apačioje.
   const { id } = useParams();
-  // Panaudojam savo susikurtą hooksą, kuris gražina vieno restorano duomenis
+  // ----- Panaudojam savo susikurtą hooksą, kuris gražina vieno restorano duomenis ----
   const [restaurant, loading] = useRestaurant(id);
+  // Update - step 2 - pakeičiamas formos tekstas iš create į update:
+  const editingForm = id !== undefined;
 
   // Create
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
@@ -126,33 +128,42 @@ const RestaurantFormPage = () => {
             }}
           >
             <DinnerDiningIcon sx={{ fontSize: 70 }} />
-            <Typography variant="h6" sx={{ fontSize: { xs: '10pt', sm: '16px' } }}>Add New Restaurant</Typography>
+            <Typography variant="h6" sx={{ fontSize: { xs: '10pt', sm: '16px' } }}>{editingForm ? 'Update Restaurant' : 'Add New Restaurant' }</Typography>
 
             <Stack spacing={1} sx={{ paddingTop: '1rem' }}>
 
               {/* Name Field */}
               <Typography variant="h6" sx={{ fontSize: '10pt' }}>Restaurant Name:</Typography>
-              <RestaurantNameFieldComponent />
+              <RestaurantNameFieldComponent
+                nameDefaultValue={restaurant?.name}
+                titleDefaultValue={restaurant?.title}
+              />
 
               {/* Contact field */}
               <Typography variant="h6" sx={{ fontSize: '10pt' }}>Contacts:</Typography>
-              <RestaurantContactFieldComponent />
+              <RestaurantContactFieldComponent
+                phoneDefaultValue={restaurant?.phone}
+                websiteDefaultValue={restaurant?.website}
+              />
 
               {/* Address field */}
               <Typography variant="h6" sx={{ fontSize: '10pt' }}>Location:</Typography>
-              <RestaurantAddressFieldComponent />
+              <RestaurantAddressFieldComponent
+                addressDefaultValue={restaurant?.location.address}
+                cityDefaultValue={restaurant?.location.city}
+              />
 
               {/* Restaurant Image Field */}
               <Typography variant="h6" sx={{ fontSize: '10pt' }}>Add Images:</Typography>
-              <ImageFieldComponent />
+              <ImageFieldComponent defaultImages={restaurant?.images} />
 
               {/* Rating */}
 
               {/* Button */}
               <Stack alignItems="center" pb="2rem">
-                <RatingComponent />
+                <RatingComponent ratingDefaultValue={restaurant?.rating} />
                 <Button variant="outlined" type="submit" fullWidth sx={{ mt: '20px' }}>
-                  Create
+                  {editingForm ? 'Update' : 'Create'}
                 </Button>
               </Stack>
 

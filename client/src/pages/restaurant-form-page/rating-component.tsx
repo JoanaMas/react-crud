@@ -1,9 +1,15 @@
 import React from 'react';
 import { Stack, Rating } from '@mui/material';
 
-const RatingComponent = () => (
+interface RatingComponentProps {
+  ratingDefaultValue?: number
+}
+
+const RatingComponent: React.FC<RatingComponentProps> = ({
+  ratingDefaultValue,
+}) => (
   <Stack alignSelf="center">
-    <Rating name="rating" />
+    <Rating name="rating" defaultValue={ratingDefaultValue} />
   </Stack>
 );
 

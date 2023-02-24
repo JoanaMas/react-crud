@@ -12,6 +12,12 @@ const HomePage = () => {
   const [restaurants, setRestaurants] = React.useState<RestaurantsModel[]>([]);
   const navigate = useNavigate();
 
+  const handleDelete = async (id: string | undefined) => {
+    await ApiService.deleteRestaurant(id);
+    const fetchedRestaurants = await ApiService.fetchRestaurants();
+    setRestaurants(fetchedRestaurants);
+  };
+
   React.useEffect(() => {
     (async () => {
       const fetchedRestaurants = await ApiService.fetchRestaurants();
@@ -42,6 +48,7 @@ const HomePage = () => {
               website={restaurant.website}
               location={restaurant.location}
               images={restaurant.images}
+              onDelete={() => handleDelete(restaurant.id)}
             />
           ))
         }
