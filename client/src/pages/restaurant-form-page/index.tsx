@@ -5,9 +5,10 @@ import {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import { RestaurantsModel } from 'models/restaurant-model';
-import axios from 'axios';
+// import axios from 'axios';
+import ApiService from 'services/api-service';
 import routes from 'navigation/routes';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import ImageFieldComponent from './image-field-component';
 import RestaurantNameFieldComponent from './restaurant-name-field-component';
 import RestaurantContactFieldComponent from './restaurant-contact-field-component';
@@ -69,15 +70,35 @@ const getRestaurantsData = (form: HTMLFormElement | undefined): Omit<Restaurants
   return values;
 };
 
+// Component
+
 const RestaurantFormPage = () => {
+  // Update
+  
+  const { id } = useParams();
+  const [restaurant, setRestaurant] = React.useState<undefined | RestaurantsModel>(undefined);
+
+
+  React.useEffect(() => {
+    if (id !== undefined) {
+      (async () => {
+        const fetchedRestaurant = await ApiService.fetchRestaurant(id);
+        setRestaurant(fetchedRestaurant);
+      })();
+    }
+  }, []);
+
+  // Create
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
 
+  // Forma
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
     const values = getRestaurantsData(formRef.current);
 
-    const response = await axios.post('http://localhost:5024/restaurants', values);
+    // const response = await axios.post('http://localhost:5024/restaurants', values);
+    const response = await ApiService.createRestaurant(values);
 
     if (response) {
       alert('Data submitted successfully');

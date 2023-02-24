@@ -1,3 +1,6 @@
+const singleRestaurantPageRoot = '/restaurant/';
+const updateRestaurantPageRoot = '/update-restaurant/';
+
 const staticRoutes = {
   HomePage: '/',
   RestaurantFormPage: '/restaurant-create-form',
@@ -5,8 +8,12 @@ const staticRoutes = {
 
 const dynamicRoutes = {
   SingleRestaurantPage: {
-    path: '/restaurant/:id',
-    createLink: (id: string | number) => `/restaurant/${id}`,
+    path: `${singleRestaurantPageRoot}:id`,
+    createLink: (id: string | undefined) => `${singleRestaurantPageRoot}${id}`,
+  },
+  UpdateRestaurantPage: {
+    path: `${updateRestaurantPageRoot}:id`,
+    createLink: (id: string | undefined) => `${updateRestaurantPageRoot}${id}`,
   },
 } as const;
 

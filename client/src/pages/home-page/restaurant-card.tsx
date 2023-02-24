@@ -2,10 +2,13 @@
 import React from 'react';
 import { RestaurantsModel } from 'models/restaurant-model';
 import {
-  Typography, Link, Box, Button,
+  Typography, Link, Box, Button, IconButton, Stack,
 } from '@mui/material';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import EditIcon from '@mui/icons-material/Edit';
 import routes from 'navigation/routes';
 import { useNavigate } from 'react-router-dom';
+import ApiService from 'services/api-service';
 import {
   RestaurantsContainer,
   HeadingAndContactFlexContainer,
@@ -26,11 +29,48 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
+  // Delete
+  const handleDelete = async () => {
+    const response = await ApiService.deleteRestaurant(id);
+
+    if (response) {
+      ApiService.fetchRestaurants();
+      document.location.reload();
+    } else {
+      alert(Error);
+    }
+  };
+
   return (
     <RestaurantsContainer
+      position="relative"
       spacing={4}
       sx={{ backgroundImage: `url(${images[0]})` }}
     >
+      <Stack direction="row" spacing={1} alignSelf="self-end" sx={{ position: 'absolute', top: '10px', right: '10px' }}>
+        {/* Edit Button */}
+        <IconButton
+          onClick={() => navigate(routes.UpdateRestaurantPage.createLink(id))}
+          disableRipple
+          sx={{
+            bgcolor: '#9689b8', color: '#FFFFFF', width: '40px', height: '40px',
+          }}
+        >
+          <EditIcon />
+        </IconButton>
+
+        {/* Delete Button */}
+        <IconButton
+          onClick={() => handleDelete()}
+          disableRipple
+          sx={{
+            bgcolor: '#9689b8', color: '#FFFFFF', width: '40px', height: '40px',
+          }}
+        >
+          <DeleteOutlineIcon />
+
+        </IconButton>
+      </Stack>
 
       <HeadingAndContactFlexContainer direction="row" spacing={4}>
 

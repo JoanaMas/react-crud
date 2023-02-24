@@ -1,5 +1,5 @@
 export interface RestaurantsModel {
-  id: string,
+  id?: string,
   name: string,
   title: string,
   phone: string,

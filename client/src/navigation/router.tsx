@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: routes.RestaurantFormPage,
         element: <RestaurantFormPage />,
       },
+      {
+        path: routes.UpdateRestaurantPage.path,
+        element: <RestaurantFormPage />,
+      },
     ],
   },
 ]);
