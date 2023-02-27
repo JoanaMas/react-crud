@@ -9,34 +9,34 @@ This is React CRUD application for learning purposes.
 
 > Important: in order to see application, you should run Server folder first, and then Client folder.
 
-## Runing application steps:
+## Running application steps:
 
 1. Clone all files from [my gitHun repository](https://github.com/JoanaMas/react-crud) (repository clone steps provided via this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)), or you can download zip file directly from my repository. 
 
 <br>
 
-2. Open terminal on [Server folder](./server/) & install libraries by adding this in CLI:
+1. Open terminal on [Server folder](./server/) & install libraries by running:
 
 ```
 npm install
 ```
 <br>
 
-3. Open terminal on [Server folder](./server) & run this:
+1. Open terminal on [Server folder](./server) & open server by running:
 
 ```
 npm run server
 ```
 <br>
 
-4. Open terminal on [Client folder](./client) & install libraries by writing command:
+4. Open terminal on [Client folder](./client) & install libraries by running:
 
 ```
 npm install
 ```
 <br>
 
-5. Open terminal on [Client folder](./client) & run:
+5. Open terminal on [Client folder](./client) & open application by running:
 
 ```
 npm run start
