@@ -11,6 +11,19 @@ import useRestaurant from 'hooks/useRestaurant';
 import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 import RingVolumeIcon from '@mui/icons-material/RingVolume';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import {
+  imageContainerStyle,
+  locationContainerStyle,
+  phoneButtonStyle,
+  restaurantNameStyle,
+  restaurantTitleStyle,
+  titleContainerStyle,
+  visitWebsiteButtonStyle,
+  locationResponsiveFontSizeStyle,
+  swiperImageStyle,
+  swiperContainerStyle,
+} from './styled';
+
 // Swipers styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -35,56 +48,55 @@ const SingleRestaurantPage = () => {
         width: 1, height: '700px', opacity: '0.9',
       }}
       >
-        <Box sx={{
-          position: 'relative', width: '100%', height: '100%', padding: '30px',
-        }}
-        >
+        <Box sx={imageContainerStyle}>
           <Img src={restaurant.images[0]} sx={{ width: '100%', height: '100%' }} />
         </Box>
         <Stack
           spacing={2}
-          sx={{
-            position: 'absolute', top: '10rem', left: '5rem', color: '#FFFFFF', backgroundColor: '#9689b8', height: { xs: '400px', sm: '350px' }, width: { xs: '400px', sm: '500px', md: '700px' }, padding: '2rem',
-          }}
+          sx={titleContainerStyle}
         >
           <Rating readOnly value={restaurant.rating} precision={0.5} />
-          <Typography variant="h1" sx={{ fontSize: { xs: '25pt', md: '30pt' } }}>{restaurant.name}</Typography>
-          <Typography variant="body1" sx={{ fontSize: { xs: '8pt', sm: '10pt', md: '13pt' } }}>{restaurant.title}</Typography>
+
+          <Typography variant="h1" sx={restaurantNameStyle}>{restaurant.name}</Typography>
+
+          <Typography noWrap component="div" variant="body1" sx={restaurantTitleStyle}>{restaurant.title}</Typography>
 
           <Stack direction="row" spacing={4} sx={{ paddingTop: '2rem' }}>
             <Button
               href={restaurant.website}
-              sx={{
-                width: '50px', height: '50px', padding: '1rem', color: '#FFFFFF', border: 3,
-              }}
+              sx={visitWebsiteButtonStyle}
             >
               <OpenInBrowserIcon />
             </Button>
 
             <Button
               href={`tel:${restaurant.phone}`}
-              sx={{
-                width: '50px', height: '50px', padding: '1rem', color: '#FFFFFF', border: 3,
-              }}
+              sx={phoneButtonStyle}
             >
               <RingVolumeIcon />
             </Button>
 
-            <Stack direction="row" spacing={1} alignItems="center" sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
+            <Stack direction="row" spacing={1} alignItems="center" sx={locationContainerStyle}>
               <LocationOnIcon />
-              <Typography>{restaurant.location.address}</Typography>
-              <Typography>{restaurant.location.city}</Typography>
+              <Typography
+                sx={locationResponsiveFontSizeStyle}
+              >
+                {restaurant.location.address}
 
+              </Typography>
+              <Typography
+                sx={locationResponsiveFontSizeStyle}
+              >
+                {restaurant.location.city}
+
+              </Typography>
             </Stack>
           </Stack>
 
         </Stack>
       </Stack>
 
-      <Box sx={{
-        width: '100%', height: '400px', pt: '40px',
-      }}
-      >
+      <Box sx={swiperContainerStyle}>
         <StyledSwiper
           modules={[Pagination]}
           pagination={{
@@ -92,6 +104,7 @@ const SingleRestaurantPage = () => {
           }}
           spaceBetween={0}
           slidesPerView={1}
+          sx={{ width: '100%' }}
         >
           {
             restaurant?.images.map((image) => (
@@ -99,9 +112,7 @@ const SingleRestaurantPage = () => {
                 <Img
                   src={image}
                   alt=""
-                  sx={{
-                    width: { xs: '500px', sm: '600px', md: '100%' }, height: 1, border: 1, borderWidth: '40px', borderColor: '#9689b8', boxSizing: 'border-box',
-                  }}
+                  sx={swiperImageStyle}
                 />
               </SwiperSlide>
             ))

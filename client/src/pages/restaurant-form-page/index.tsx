@@ -5,7 +5,6 @@ import {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import { RestaurantsModel } from 'models/restaurant-model';
-// import axios from 'axios';
 import ApiService from 'services/api-service';
 import routes from 'navigation/routes';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -16,6 +15,7 @@ import RestaurantContactFieldComponent from './restaurant-contact-field-componen
 import RestaurantAddressFieldComponent from './restaurant-address-field-component';
 import FormImageComponent from './form-image-component';
 import RatingComponent from './rating-component';
+import { formContentStyle, formStyle, imputFieldFontSize } from './styled';
 
 const theme = createTheme({
   palette: {
@@ -78,28 +78,36 @@ const RestaurantFormPage = () => {
   // Update - step 1 - gaunamas vieno puslapio duomenų objektas, priklausomai nuo ID
   // išsitraukus ID galime daryti pakeitimus formos UI, ---> žiūrėti į gražinamą JSX apačioje.
   const { id } = useParams();
+
   // ----- Panaudojam savo susikurtą hooksą, kuris gražina vieno restorano duomenis ----
   const [restaurant, loading] = useRestaurant(id);
+
   // Update - step 2 - pakeičiamas formos tekstas iš create į update:
   const editingForm = id !== undefined;
 
-  // Create
+  // Create & Update
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
 
   // Forma
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
-    const values = getRestaurantsData(formRef.current);
 
-    // const response = await axios.post('http://localhost:5024/restaurants', values);
-    const response = await ApiService.createRestaurant(values);
-
-    if (response) {
-      alert('Data submitted successfully');
-      navigate(routes.HomePage);
-    } else {
-      alert(Error);
+    try {
+      const values = getRestaurantsData(formRef.current);
+      if (!editingForm) {
+        await ApiService.createRestaurant(values);
+        navigate(routes.HomePage);
+      } else {
+        await ApiService.updateRestaurant(id, values);
+        navigate(routes.HomePage);
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert('Error on form submit. Contact system administrator.');
+      }
     }
   };
 
@@ -110,9 +118,7 @@ const RestaurantFormPage = () => {
       <Stack justifyContent="center" direction="row" py={8}>
         <Stack
           direction="row"
-          sx={{
-            backgroundColor: '#9689b8', width: { xs: 1, md: '800px' }, maxHeight: 'auto', mx: { xs: '20px' }, color: '#FFFFFF',
-          }}
+          sx={formStyle}
         >
           {/* Form Image Component */}
           <FormImageComponent />
@@ -123,38 +129,36 @@ const RestaurantFormPage = () => {
             ref={formRef}
             spacing={2}
             alignItems="center"
-            sx={{
-              paddingLeft: '1rem', paddingTop: '2rem', width: { xs: '100%', sm: '60%' },
-            }}
+            sx={formContentStyle}
           >
             <DinnerDiningIcon sx={{ fontSize: 70 }} />
-            <Typography variant="h6" sx={{ fontSize: { xs: '10pt', sm: '16px' } }}>{editingForm ? 'Update Restaurant' : 'Add New Restaurant' }</Typography>
+            <Typography variant="h6" sx={{ fontSize: { xs: '10pt', sm: '16px' } }}>{editingForm ? 'Update Restaurant' : 'Add New Restaurant'}</Typography>
 
             <Stack spacing={1} sx={{ paddingTop: '1rem' }}>
 
               {/* Name Field */}
-              <Typography variant="h6" sx={{ fontSize: '10pt' }}>Restaurant Name:</Typography>
+              <Typography variant="h6" sx={imputFieldFontSize}>Restaurant Name:</Typography>
               <RestaurantNameFieldComponent
                 nameDefaultValue={restaurant?.name}
                 titleDefaultValue={restaurant?.title}
               />
 
               {/* Contact field */}
-              <Typography variant="h6" sx={{ fontSize: '10pt' }}>Contacts:</Typography>
+              <Typography variant="h6" sx={imputFieldFontSize}>Contacts:</Typography>
               <RestaurantContactFieldComponent
                 phoneDefaultValue={restaurant?.phone}
                 websiteDefaultValue={restaurant?.website}
               />
 
               {/* Address field */}
-              <Typography variant="h6" sx={{ fontSize: '10pt' }}>Location:</Typography>
+              <Typography variant="h6" sx={imputFieldFontSize}>Location:</Typography>
               <RestaurantAddressFieldComponent
                 addressDefaultValue={restaurant?.location.address}
                 cityDefaultValue={restaurant?.location.city}
               />
 
               {/* Restaurant Image Field */}
-              <Typography variant="h6" sx={{ fontSize: '10pt' }}>Add Images:</Typography>
+              <Typography variant="h6" sx={imputFieldFontSize}>Add Images:</Typography>
               <ImageFieldComponent defaultImages={restaurant?.images} />
 
               {/* Rating */}

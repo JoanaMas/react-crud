@@ -23,13 +23,19 @@ const fetchRestaurant = async (id: string | number) => {
 };
 
 const createRestaurant = async (values: RestaurantsModel) => {
-  const response = await axios.post('http://localhost:5024/restaurants', values);
+  const response = await api.post('/restaurants', values);
 
   return response.data;
 };
 
 const deleteRestaurant = async (id: string | undefined) => {
-  const response = await axios.delete(`http://localhost:5024/restaurants/${id}`);
+  const response = await api.delete(`/restaurants/${id}`);
+
+  return response.data;
+};
+
+const updateRestaurant = async (id: string | undefined, values: RestaurantsModel) => {
+  const response = await api.patch(`/restaurants/${id}`, values);
 
   return response.data;
 };
@@ -39,6 +45,7 @@ const ApiService = {
   fetchRestaurant,
   createRestaurant,
   deleteRestaurant,
+  updateRestaurant,
 };
 
 export default ApiService;
